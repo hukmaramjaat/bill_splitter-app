@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="script.js" defer></script>
+</head>
+<body class=" flex pt-24 justify-center box-border">
+    <main class="flex  gap-6 max-md:flex-col">
+        <section class="w-96 max-md:w-80 m-auto">
+            <h3 class="text-violet-700 text-xl pb-2">Bill</h3>
+            <div class="text-violet-600 border-[1px] p-1 rounded pl-3 border-black text-xl">
+                <span class="text-xl">₹</span>
+                <input type="number" class="outline-none paymentinput  w-[90%]">
+                <input[type="number"]>
+            </div>
+            <p class="text-violet-600 text-xl mt-4">Select Tip</p>
+            <div class="my-1 flex flex-wrap tip-container max-md:grid grid-cols-3">
+                <span class="bg-violet-400 p-3 rounded-lg px-8 text-white cursor-not-allowed mx-2 ml-0 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">05%</span>
+                <span class="bg-violet-400 p-3 rounded-lg px-8 text-white cursor-not-allowed mx-2 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">10%</span>
+                <span class="bg-violet-400 p-3 rounded-lg px-8 text-white cursor-not-allowed mx-2 mr-0 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">15%</span>
+                <span class="bg-violet-400 p-3 rounded-lg px-8 mx-2 text-white cursor-not-allowed mt-3 ml-0 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">25%</span>
+                <span class="bg-violet-400 p-3 rounded-lg px-8 mx-2   text-white cursor-not-allowed mt-3 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">50%</span>
+                <span class="bg-violet-400 p-3 rounded-lg px-8 mx-2 text-white cursor-not-allowed mt-3 mr-0 open-menu:cursor-pointer open-menu:bg-violet-700 border:border-4 border:border-yellow-600">75%</span>
+            </div>
+            
+            <input class="customtip outline-none  border-[1px] p-1 mt-2 rounded bg-gray-200 text-black border-black w-full cursor-not-allowed open-menu:cursor-text" type="number" disabled placeholder="Custom Tip in Percentage">
+            <div class="my-2">
+                <p class="mb-1">Number of People</p>
+                <input class="outline-none  border-[1px] p-1 rounded w-full border-black bg-gray-200 text-black people cursor-not-allowed open-menu:cursor-text" type="number" disabled placeholder="Number of People">
+            </div>
+            <button class="btn-bill w-full py-2 mt-3 rounded-lg text-white bg-violet-400 cursor-not-allowed  open-menu:cursor-pointer open-menu:bg-violet-700">Generate Bill</button>
+        </section>
+        <section class="bg-[#34568b] text-white rounded-md p-7 flex flex-col gap-9 w-80 text-xl font-semibold">
+            <div class="flex items-center justify-between">
+                <p>Tip amount</p>
+                <h3 class="tipAmount">₹</h3>
+            </div>
+            <div class="flex items-center justify-between">
+                <p>Total</p>
+                <h3 class="total">₹</h3>
+            </div>
+            <div class="flex items-center justify-between">
+                <p>Each Person Bill</p>
+                <h3 class="eachPersonBill">₹</h3>
+            </div>
+            <button class="bg-gray-400 py-1 rounded-md text-center reset-btn open-menu:bg-slate-50 open-menu:text-slate-800" type="reset" disabled>Reset</button>
+        </section>
+    </main>
+</body>
+</html>
